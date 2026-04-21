@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miami Vibes — 305 Forever</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@300;400;600;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sunset sky gradient + sun -->
+  <div class="sky">
+    <div class="sun"></div>
+    <div class="stars"></div>
+  </div>
+
+  <!-- Ocean horizon with animated waves -->
+  <div class="ocean">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+    <div class="wave wave-3"></div>
+  </div>
+
+  <!-- Palm tree silhouettes -->
+  <div class="palm palm-left">
+    <div class="trunk"></div>
+    <div class="leaf leaf-1"></div>
+    <div class="leaf leaf-2"></div>
+    <div class="leaf leaf-3"></div>
+    <div class="leaf leaf-4"></div>
+    <div class="leaf leaf-5"></div>
+    <div class="leaf leaf-6"></div>
+  </div>
+  <div class="palm palm-right">
+    <div class="trunk"></div>
+    <div class="leaf leaf-1"></div>
+    <div class="leaf leaf-2"></div>
+    <div class="leaf leaf-3"></div>
+    <div class="leaf leaf-4"></div>
+    <div class="leaf leaf-5"></div>
+    <div class="leaf leaf-6"></div>
+  </div>
+
+  <!-- Rain layer (JS populates this) -->
+  <div class="rain-layer" id="rainLayer" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="logo">MIAMI<span>305</span></div>
+    <nav>
+      <a href="#vibes">Vibes</a>
+      <a href="#spots">Spots</a>
+      <a href="#weather">Weather</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main class="hero" id="vibes">
+    <h1 class="title">
+      <span class="line line-1">MIAMI</span>
+      <span class="line line-2">FOREVER</span>
+    </h1>
+    <p class="tagline">
+      Palm trees, pastel skies, and sudden tropical storms. Press the button to
+      summon the rain.
+    </p>
+
+    <!-- The weather button -->
+    <div class="weather" id="weather">
+      <button class="rain-btn" id="rainBtn" aria-pressed="false">
+        <span class="icon">
+          <svg viewBox="0 0 64 64" width="28" height="28" aria-hidden="true">
+            <defs>
+              <linearGradient id="cloudGrad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#fff" />
+                <stop offset="100%" stop-color="#ffd6ec" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M20 40a10 10 0 010-20 14 14 0 0127-3 10 10 0 013 19z"
+              fill="url(#cloudGrad)"
+            />
+            <line class="drop" x1="22" y1="46" x2="18" y2="56" />
+            <line class="drop" x1="34" y1="46" x2="30" y2="56" />
+            <line class="drop" x1="46" y1="46" x2="42" y2="56" />
+          </svg>
+        </span>
+        <span class="label" id="rainLabel">Make it rain</span>
+      </button>
+      <p class="weather-status" id="weatherStatus">Sunny &amp; 84°F in South Beach</p>
+    </div>
+  </main>
+
+  <!-- Spots section -->
+  <section class="spots" id="spots">
+    <h2>Iconic Spots</h2>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">🌴</div>
+        <h3>South Beach</h3>
+        <p>Art deco, turquoise water, and sand so white it glows at sunset.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🎨</div>
+        <h3>Wynwood</h3>
+        <p>Murals on every wall. A neighborhood built out of spray paint and coffee.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🛥️</div>
+        <h3>Biscayne Bay</h3>
+        <p>Sunset cruises, flamingos at dusk, and the best skyline in the South.</p>
+      </article>
+      <article class="card">
+        <div class="card-icon">🥐</div>
+        <h3>Little Havana</h3>
+        <p>Cafecito, dominos on Calle Ocho, and salsa floating through the air.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Weather section -->
+  <section class="forecast" id="weather">
+    <h2>7-Day Forecast</h2>
+    <div class="days">
+      <div class="day"><span>MON</span><span class="d-icon">☀️</span><span>87°</span></div>
+      <div class="day"><span>TUE</span><span class="d-icon">⛅</span><span>85°</span></div>
+      <div class="day"><span>WED</span><span class="d-icon">🌧️</span><span>79°</span></div>
+      <div class="day"><span>THU</span><span class="d-icon">⛈️</span><span>78°</span></div>
+      <div class="day"><span>FRI</span><span class="d-icon">☀️</span><span>88°</span></div>
+      <div class="day"><span>SAT</span><span class="d-icon">☀️</span><span>90°</span></div>
+      <div class="day"><span>SUN</span><span class="d-icon">🌤️</span><span>86°</span></div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>Made with sunshine · 305 · <span class="heart">♥</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
